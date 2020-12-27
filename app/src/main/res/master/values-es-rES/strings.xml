@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Equipo, enlaces sociales</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">Color de énfasis</string>
     <string name="accent_color_desc">El color de énfasis del tema, es morado por defecto</string>
     <string name="action_about">Acerca de Music pro</string>

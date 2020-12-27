@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="about_album_label">Σχετικά με %s</string>
-    <string name="about_settings_summary">Ομάδα, κοινωνικοί σύνδεσμοι</string>
+    <string name="about_settings_summary">Rate, share, version</string>
 
     <string name="accent_color">Χρώμα Τονισμού</string>
     <string name="accent_color_desc">Το χρώμα τονισμού του θέματος, η προεπιλογή είναι το πράσινο.</string>

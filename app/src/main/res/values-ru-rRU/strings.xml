@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
     <string name="about_album_label">Об альбоме %s</string>
-    <string name="about_settings_summary">Команда, ссылки на соц. сети</string>
+    <string name="about_settings_summary">Rate, share, version</string>
 
     <string name="accent_color">Основной цвет</string>
     <string name="accent_color_desc">Основной цвет, по умолчанию фиолетовый</string>

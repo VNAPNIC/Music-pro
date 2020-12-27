@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Team, soziale Netzwerke</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">Akzentfarbe</string>
     <string name="accent_color_desc">Akzentfarbe des Farbthemas, Standard ist Grün</string>
     <string name="action_about">Über</string>

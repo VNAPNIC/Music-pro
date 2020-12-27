@@ -37,6 +37,16 @@
         <item name="android:focusable">false</item>
     </style>
 
+    <style name="downloadButton">
+        <item name="srcCompat">@drawable/ic_download_main</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">?attr/roundSelector</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:focusable">false</item>
+    </style>
+
     <style name="MusicProgressSlider" parent="MusicProgressSliderParent">
         <item name="android:thumbOffset">0dp</item>
     </style>

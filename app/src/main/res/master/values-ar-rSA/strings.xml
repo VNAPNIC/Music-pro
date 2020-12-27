@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">الفريق, الروابط للتواصل</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">اللون الأساسي</string>
     <string name="accent_color_desc">لون تمييز المظهر ، يتم تعيينه إلى اللون الأرجواني</string>
     <string name="action_about">حول</string>

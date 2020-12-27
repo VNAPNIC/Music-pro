@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="about_album_label">About %s</string>
-    <string name="about_settings_summary">Team, social links</string>
+    <string name="about_settings_summary">Rate, share, version</string>
 
     <string name="accent_color">重點色調</string>
     <string name="accent_color_desc">重點色調，預設為粉紅色。</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Team, social links</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">Barva akcentů</string>
     <string name="accent_color_desc">Barva motivu akcentu je výchozí k růžové barvě.</string>
     <string name="action_about">Informace</string>

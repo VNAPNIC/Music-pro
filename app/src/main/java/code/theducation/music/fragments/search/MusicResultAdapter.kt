@@ -1,13 +1,19 @@
 package code.theducation.music.fragments.search
 
+import android.content.res.ColorStateList
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import code.theducation.music.R
+import code.theducation.music.extensions.show
+import code.theducation.music.glide.RetroMusicColoredTarget
+import code.theducation.music.glide.SongGlideRequest
 import code.theducation.music.model.Song
+import code.theducation.music.util.color.MediaNotificationProcessor
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.item_music_result.view.*
 
 interface MusicResultAdapterCallback {
@@ -22,10 +28,16 @@ class MusicResultAdapter(private val callback: MusicResultAdapterCallback) :
     private var songs = arrayListOf<Song>()
 
     fun updatePlayMusic(id: Long) {
-        songs.forEach { element ->
-            element.isPlaying = element.id == id
+        for (i in 0 until songs.size){
+            if(songs[i].isPlaying){
+                songs[i].isPlaying = false
+              notifyItemChanged(i)
+            }
+            if(songs[i].id  == id){
+                songs[i].isPlaying = true
+                notifyItemChanged(i)
+            }
         }
-        notifyDataSetChanged()
     }
 
     fun addNew(songs: ArrayList<Song>) {
@@ -58,23 +70,41 @@ class MusicResultAdapter(private val callback: MusicResultAdapterCallback) :
 
     inner class ViewHolder(private val callback: MusicResultAdapterCallback, val view: View) :
         RecyclerView.ViewHolder(view) {
-        fun onBin(data: Song, position: Int) {
-            view.txtVideoTitle.text = data.title.replace("/", "\\").replace(":", "-")
-            view.txtChannelName.text = data.title.replace("/", "\\").replace(":", "-")
+        fun onBin(song: Song, position: Int) {
+            view.title.text = song.title.replace("/", "\\").replace(":", "-")
+            view.text.text = song.title.replace("/", "\\").replace(":", "-")
 
-            view.imgDownload.visibility = View.VISIBLE
-            view.pbLoadingGetLink.visibility = View.GONE
-            view.rlItemVideo.setBackgroundColor(
-                if (data.isPlaying) view.resources.getColor(R.color.lrc_timeline_text_color)
-                else Color.parseColor("#ffffff")
-            )
-            view.imgVideo.setImageResource(R.drawable.ic_audiotrack)
-            view.imgDownload.setOnClickListener {
-                callback.onDownloadSong(data)
+            view.download.show()
+            view.download.setOnClickListener {
+                callback.onDownloadSong(song)
             }
             view.setOnClickListener {
                 callback.onPlaySong(songs, position)
             }
+
+            loadAlbumCover(song)
+        }
+
+        private fun loadAlbumCover(song: Song) {
+            SongGlideRequest.Builder.from(Glide.with(view.context), song)
+                .checkIgnoreMediaStore(view.context)
+                .generatePalette(view.context).build()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(object : RetroMusicColoredTarget(view.image) {
+                    override fun onColorReady(colors: MediaNotificationProcessor) {
+                        setColors(song, colors)
+                    }
+                })
+        }
+
+        private fun setColors(song: Song, color: MediaNotificationProcessor) {
+            view.paletteColorContainer.setBackgroundColor(
+                if (song.isPlaying) color.actionBarColor
+                else Color.parseColor("#ffffff")
+            )
+            view.title.setTextColor(color.primaryTextColor)
+            view.text.setTextColor(color.secondaryTextColor)
+            view.download.imageTintList = ColorStateList.valueOf(color.primaryTextColor)
         }
     }
 }

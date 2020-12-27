@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">我們的團隊，以及社交媒體</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">主題色</string>
     <string name="accent_color_desc">主題重色，預設為藍綠色</string>
     <string name="action_about">關於</string>

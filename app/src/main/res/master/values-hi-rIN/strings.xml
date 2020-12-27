@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">टीम, सामाजिक लिंक</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="accent_color_desc">एक्सेंट विषयवस्तु रंग, डिफ़ॉल्ट हरा है।</string>
     <string name="action_about">इसके बारे में</string>

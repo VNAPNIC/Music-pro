@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="about_album_label">%s kadar</string>
-    <string name="about_settings_summary">Ekip, sosyal medya linkleri</string>
+    <string name="about_settings_summary">Rate, share, version</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="accent_color_desc">Tema vurgu rengi, varsayılan olarak mor renktedir</string>

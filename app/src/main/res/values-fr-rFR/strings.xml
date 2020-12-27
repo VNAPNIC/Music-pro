@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="about_album_label">About %s</string>
-    <string name="about_settings_summary">Équipe, liens sociaux</string>
+    <string name="about_settings_summary">Rate, share, version</string>
 
     <string name="accent_color">Couleur d\'accentuation</string>
     <string name="accent_color_desc">La couleur d\'accentuation du thème, verte par défaut</string>

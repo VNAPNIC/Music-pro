@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="about_album_label">Tentang %s</string>
-    <string name="about_settings_summary">Tim, tautan sosial</string>
+    <string name="about_settings_summary">Rate, share, version</string>
 
     <string name="accent_color">Warna Aksen</string>
     <string name="accent_color_desc">Warna aksen tema, bawaan adalah ungu</string>

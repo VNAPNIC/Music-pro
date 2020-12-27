@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Team e pagine social</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">Colore in rilievo</string>
     <string name="accent_color_desc">Il colore secondario del tema, il predefinito è verde</string>
     <string name="action_about">Informazioni</string>

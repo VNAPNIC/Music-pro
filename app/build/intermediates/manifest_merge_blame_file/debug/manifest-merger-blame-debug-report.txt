@@ -44,529 +44,759 @@
 22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 22-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:19:5-81
 22-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:19:22-78
-23    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-23-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1e7ec1c284e86249a080381939104189\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:5-76
-23-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1e7ec1c284e86249a080381939104189\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:22-73
-24
-25    <application
-25-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:21:5-261:19
-26        android:name="code.theducation.music.App"
-26-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:22:9-28
-27        android:allowBackup="true"
-27-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:23:9-35
-28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-28-->[androidx.core:core:1.3.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\402936535f2bd519ee01bfaf83e81910\core-1.3.1\AndroidManifest.xml:24:18-86
-29        android:configChanges="locale|layoutDirection"
-29-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:24:9-55
-30        android:debuggable="true"
-31        android:icon="@mipmap/ic_launcher"
-31-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:25:9-43
-32        android:label="@string/app_name"
-32-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:26:9-41
-33        android:networkSecurityConfig="@xml/network_security_config"
-33-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:27:9-69
-34        android:requestLegacyExternalStorage="true"
-34-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:28:9-52
-35        android:roundIcon="@mipmap/ic_launcher_round"
-35-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:29:9-54
-36        android:supportsRtl="true"
-36-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:30:9-35
-37        android:testOnly="true"
-38        android:theme="@style/Theme.RetroMusic.FollowSystem"
-38-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:31:9-61
-39        android:usesCleartextTraffic="true" >
-39-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:32:9-44
-40        <uses-library
-40-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:36:9-38:40
-41            android:name="org.apache.http.legacy"
-41-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:37:13-50
-42            android:required="false" />
-42-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:38:13-37
-43
-44        <activity
-44-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:40:9-113:20
-45            android:name="code.theducation.music.activities.MainActivity"
-45-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:41:13-52
-46            android:label="@string/app_name"
-46-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:42:13-45
-47            android:theme="@style/SplashTheme" >
-47-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:43:13-47
-48            <intent-filter>
-48-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:44:13-51:29
-49                <action android:name="android.intent.action.MAIN" />
-49-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:45:17-69
-49-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:45:25-66
-50                <action android:name="android.intent.action.MUSIC_PLAYER" />
-50-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:46:17-77
-50-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:46:25-74
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:48:17-77
-52-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:48:27-74
-53                <category android:name="android.intent.category.APP_MUSIC" />
-53-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:49:17-78
-53-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:49:27-75
-54                <category android:name="android.intent.category.DEFAULT" />
-54-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
-54-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
-55            </intent-filter>
-56            <intent-filter>
-56-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:52:13-56:29
-57                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
-57-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:53:17-86
-57-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:53:25-83
-58
-59                <category android:name="android.intent.category.DEFAULT" />
-59-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
-59-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
-60            </intent-filter>
-61            <intent-filter>
-61-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:57:13-67:29
-62                <action android:name="android.intent.action.VIEW" />
-62-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
-62-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
-63
-64                <category android:name="android.intent.category.DEFAULT" />
-64-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
-64-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+23    <!-- Android package visibility setting -->
+24    <queries>
+24-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:27:5-38:15
+25
+26        <!-- For browser content -->
+27        <intent>
+27-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:30:9-36:18
+28            <action android:name="android.intent.action.VIEW" />
+28-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
+28-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
+29
+30            <category android:name="android.intent.category.BROWSABLE" />
+30-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:83:17-78
+30-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:83:27-75
+31
+32            <data android:scheme="https" />
+32-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+32-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:23-47
+33        </intent>
+34        <!-- End of browser content -->
+35    </queries>
+36
+37    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+37-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1e7ec1c284e86249a080381939104189\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:5-76
+37-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1e7ec1c284e86249a080381939104189\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:22-73
+38
+39    <application
+39-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:21:5-266:19
+40        android:name="code.theducation.music.App"
+40-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:22:9-28
+41        android:allowBackup="true"
+41-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:23:9-35
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.3.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\402936535f2bd519ee01bfaf83e81910\core-1.3.1\AndroidManifest.xml:24:18-86
+43        android:configChanges="locale|layoutDirection"
+43-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:24:9-55
+44        android:debuggable="true"
+45        android:icon="@mipmap/ic_launcher"
+45-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:25:9-43
+46        android:label="@string/app_name"
+46-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:26:9-41
+47        android:networkSecurityConfig="@xml/network_security_config"
+47-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:27:9-69
+48        android:requestLegacyExternalStorage="true"
+48-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:28:9-52
+49        android:roundIcon="@mipmap/ic_launcher_round"
+49-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:29:9-54
+50        android:supportsRtl="true"
+50-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:30:9-35
+51        android:testOnly="true"
+52        android:theme="@style/Theme.RetroMusic.FollowSystem"
+52-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:31:9-61
+53        android:usesCleartextTraffic="true" >
+53-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:32:9-44
+54        <uses-library
+54-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:36:9-38:40
+55            android:name="org.apache.http.legacy"
+55-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:37:13-50
+56            android:required="false" />
+56-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:38:13-37
+57
+58        <activity
+58-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:40:9-113:20
+59            android:name="code.theducation.music.activities.MainActivity"
+59-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:41:13-52
+60            android:label="@string/app_name"
+60-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:42:13-45
+61            android:theme="@style/SplashTheme" >
+61-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:43:13-47
+62            <intent-filter>
+62-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:44:13-51:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:45:17-69
+63-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:45:25-66
+64                <action android:name="android.intent.action.MUSIC_PLAYER" />
+64-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:46:17-77
+64-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:46:25-74
 65
-66                <data android:scheme="content" />
-66-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-66-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:23-47
-67                <data android:mimeType="audio/*" />
-67-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-67-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-68                <data android:mimeType="application/ogg" />
-68-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-68-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-69                <data android:mimeType="application/x-ogg" />
-69-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-69-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-70                <data android:mimeType="application/itunes" />
-70-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-70-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-71            </intent-filter>
-72            <intent-filter>
-72-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:68:13-78:29
-73                <action android:name="android.intent.action.VIEW" />
-73-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
-73-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
-74
-75                <category android:name="android.intent.category.DEFAULT" />
-75-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
-75-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
-76
-77                <data android:scheme="file" />
-77-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-77-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:23-47
-78                <data android:mimeType="audio/*" />
-78-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-78-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-79                <data android:mimeType="application/ogg" />
-79-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-79-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-80                <data android:mimeType="application/x-ogg" />
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:48:17-77
+66-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:48:27-74
+67                <category android:name="android.intent.category.APP_MUSIC" />
+67-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:49:17-78
+67-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:49:27-75
+68                <category android:name="android.intent.category.DEFAULT" />
+68-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
+68-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+69            </intent-filter>
+70            <intent-filter>
+70-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:52:13-56:29
+71                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+71-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:53:17-86
+71-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:53:25-83
+72
+73                <category android:name="android.intent.category.DEFAULT" />
+73-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
+73-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+74            </intent-filter>
+75            <intent-filter>
+75-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:57:13-67:29
+76                <action android:name="android.intent.action.VIEW" />
+76-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
+76-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
+77
+78                <category android:name="android.intent.category.DEFAULT" />
+78-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
+78-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+79
+80                <data android:scheme="content" />
 80-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-80-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-81                <data android:mimeType="application/itunes" />
+80-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:23-47
+81                <data android:mimeType="audio/*" />
 81-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
 81-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-82            </intent-filter>
-83            <intent-filter>
-83-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:79:13-90:29
-84                <action android:name="android.intent.action.VIEW" />
-84-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
-84-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
-85
-86                <category android:name="android.intent.category.DEFAULT" />
-86-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
-86-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
-87                <category android:name="android.intent.category.BROWSABLE" />
-87-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:83:17-78
-87-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:83:27-75
+82                <data android:mimeType="application/ogg" />
+82-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+82-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+83                <data android:mimeType="application/x-ogg" />
+83-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+83-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+84                <data android:mimeType="application/itunes" />
+84-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+84-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+85            </intent-filter>
+86            <intent-filter>
+86-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:68:13-78:29
+87                <action android:name="android.intent.action.VIEW" />
+87-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
+87-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
 88
-89                <data android:scheme="http" />
-89-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-89-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:23-47
-90                <data android:mimeType="audio/*" />
-90-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-90-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-91                <data android:mimeType="application/ogg" />
+89                <category android:name="android.intent.category.DEFAULT" />
+89-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
+89-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+90
+91                <data android:scheme="file" />
 91-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-91-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-92                <data android:mimeType="application/x-ogg" />
+91-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:23-47
+92                <data android:mimeType="audio/*" />
 92-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
 92-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-93                <data android:mimeType="application/itunes" />
+93                <data android:mimeType="application/ogg" />
 93-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
 93-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-94            </intent-filter>
-95            <intent-filter>
-95-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:91:13-99:29
-96                <action android:name="android.intent.action.VIEW" />
-96-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
-96-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
-97
-98                <category android:name="android.intent.category.DEFAULT" />
-98-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
-98-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+94                <data android:mimeType="application/x-ogg" />
+94-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+94-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+95                <data android:mimeType="application/itunes" />
+95-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+95-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+96            </intent-filter>
+97            <intent-filter>
+97-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:79:13-90:29
+98                <action android:name="android.intent.action.VIEW" />
+98-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
+98-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
 99
-100                <data android:mimeType="vnd.android.cursor.dir/playlist" />
-100-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-100-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-101                <data android:mimeType="vnd.android.cursor.dir/albums" />
-101-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-101-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-102                <data android:mimeType="vnd.android.cursor.dir/artists" />
-102-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
-102-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-103            </intent-filter>
-104            <intent-filter>
-104-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:100:13-104:29
-105                <action android:name="com.cyanogenmod.eleven.AUDIO_PLAYER" />
-105-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:101:17-78
-105-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:101:25-75
-106
-107                <category android:name="android.intent.category.DEFAULT" />
-107-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
-107-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+100                <category android:name="android.intent.category.DEFAULT" />
+100-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
+100-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+101                <category android:name="android.intent.category.BROWSABLE" />
+101-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:83:17-78
+101-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:83:27-75
+102
+103                <data android:scheme="http" />
+103-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+103-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:23-47
+104                <data android:mimeType="audio/*" />
+104-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+104-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+105                <data android:mimeType="application/ogg" />
+105-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+105-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+106                <data android:mimeType="application/x-ogg" />
+106-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+106-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+107                <data android:mimeType="application/itunes" />
+107-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+107-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
 108            </intent-filter>
 109            <intent-filter>
-109-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:105:13-112:29
-110                <action android:name="android.intent.action.PICK" />
-110-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:106:17-69
-110-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:106:25-66
+109-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:91:13-99:29
+110                <action android:name="android.intent.action.VIEW" />
+110-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:17-69
+110-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:58:25-66
 111
 112                <category android:name="android.intent.category.DEFAULT" />
 112-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
 112-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
-113                <category android:name="android.intent.category.OPENABLE" />
-113-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:109:17-77
-113-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:109:27-74
-114
-115                <data android:mimeType="vnd.android.cursor.dir/audio" />
+113
+114                <data android:mimeType="vnd.android.cursor.dir/playlist" />
+114-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+114-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+115                <data android:mimeType="vnd.android.cursor.dir/albums" />
 115-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
 115-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
-116            </intent-filter>
-117        </activity>
-118        <activity android:name="code.theducation.music.activities.PlayingQueueActivity" />
-118-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:114:9-69
-118-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:114:19-66
-119        <activity android:name="code.theducation.music.activities.SettingsActivity" />
-119-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:115:9-65
-119-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:115:19-62
-120        <activity android:name="code.theducation.music.activities.tageditor.AlbumTagEditorActivity" />
-120-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:116:9-81
-120-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:116:19-78
-121        <activity android:name="code.theducation.music.activities.tageditor.SongTagEditorActivity" />
-121-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:117:9-80
-121-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:117:19-77
-122        <activity android:name="code.theducation.music.activities.LyricsActivity" />
-122-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:118:9-63
-122-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:118:19-60
-123        <activity android:name="code.theducation.music.activities.UserInfoActivity" />
-123-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:119:9-65
-123-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:119:19-62
-124        <activity android:name="code.theducation.music.activities.LicenseActivity" />
-124-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:120:9-64
-124-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:120:19-61
-125        <activity android:name="code.theducation.music.activities.ShareInstagramStory" />
-125-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:121:9-68
-125-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:121:19-65
-126        <activity android:name="code.theducation.music.activities.DriveModeActivity" />
-126-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:122:9-66
-126-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:122:19-63
-127        <activity android:name="code.theducation.music.activities.PermissionActivity" />
-127-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:123:9-67
-127-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:123:19-64
-128        <activity android:name="code.theducation.music.activities.LockScreenActivity" />
-128-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:124:9-67
-128-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:124:19-64
-129        <activity
-129-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:126:9-129:75
-130            android:name="code.theducation.music.appshortcuts.AppShortcutLauncherActivity"
-130-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:127:13-69
-131            android:launchMode="singleInstance"
-131-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:128:13-48
-132            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-132-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:129:13-72
-133        <activity
-133-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:131:9-133:50
-134            android:name="code.theducation.music.activities.saf.SAFGuideActivity"
-134-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:132:13-60
-135            android:theme="@style/Theme.Intro" />
-135-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:133:13-47
-136
-137        <provider
-138            android:name="code.theducation.music.misc.GenericFileProvider"
-138-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:136:13-53
-139            android:authorities="code.theducation.music.debug.provider"
-139-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:137:13-60
-140            android:exported="false"
-140-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:138:13-37
-141            android:grantUriPermissions="true" >
-141-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:139:13-47
-142            <meta-data
-142-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:140:13-142:58
-143                android:name="android.support.FILE_PROVIDER_PATHS"
-143-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:141:17-67
-144                android:resource="@xml/provider_paths" />
-144-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:142:17-55
-145        </provider>
-146        <provider
-147            android:name="androidx.core.content.FileProvider"
-147-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:147:13-62
-148            android:authorities="code.theducation.music.debug"
-148-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:148:13-51
-149            android:exported="false"
-149-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:149:13-37
-150            android:grantUriPermissions="true" >
-150-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:150:13-47
-151            <meta-data
-151-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:140:13-142:58
-152                android:name="android.support.FILE_PROVIDER_PATHS"
-152-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:141:17-67
-153                android:resource="@xml/provider_paths" />
-153-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:142:17-55
-154        </provider>
-155
-156        <receiver android:name="code.theducation.music.service.MediaButtonIntentReceiver" >
-156-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:156:9-160:20
-156-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:156:19-68
-157            <intent-filter>
-157-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:157:13-159:29
-158                <action android:name="android.intent.action.MEDIA_BUTTON" />
-158-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:158:17-77
-158-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:158:25-74
-159            </intent-filter>
-160        </receiver>
-161        <receiver android:name="code.theducation.music.appwidgets.BootReceiver" >
-161-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:162:9-167:20
-161-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:162:19-58
-162            <intent-filter>
-162-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:163:13-166:29
-163                <action android:name="android.intent.action.BOOT_COMPLETED" />
-163-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:164:17-79
-163-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:164:25-76
-164                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-164-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:165:17-82
-164-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:165:25-79
-165            </intent-filter>
-166        </receiver>
-167        <receiver
-167-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:169:9-180:20
-168            android:name="code.theducation.music.appwidgets.AppWidgetBig"
-168-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:170:13-52
-169            android:exported="false"
-169-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:171:13-37
-170            android:label="@string/app_widget_big_name" >
-170-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:172:13-56
+116                <data android:mimeType="vnd.android.cursor.dir/artists" />
+116-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+116-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+117            </intent-filter>
+118            <intent-filter>
+118-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:100:13-104:29
+119                <action android:name="com.cyanogenmod.eleven.AUDIO_PLAYER" />
+119-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:101:17-78
+119-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:101:25-75
+120
+121                <category android:name="android.intent.category.DEFAULT" />
+121-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
+121-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+122            </intent-filter>
+123            <intent-filter>
+123-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:105:13-112:29
+124                <action android:name="android.intent.action.PICK" />
+124-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:106:17-69
+124-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:106:25-66
+125
+126                <category android:name="android.intent.category.DEFAULT" />
+126-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:17-76
+126-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:50:27-73
+127                <category android:name="android.intent.category.OPENABLE" />
+127-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:109:17-77
+127-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:109:27-74
+128
+129                <data android:mimeType="vnd.android.cursor.dir/audio" />
+129-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:62:17-50
+129-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:63:23-49
+130            </intent-filter>
+131        </activity>
+132        <activity android:name="code.theducation.music.activities.PlayingQueueActivity" />
+132-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:114:9-69
+132-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:114:19-66
+133        <activity android:name="code.theducation.music.activities.SettingsActivity" />
+133-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:115:9-65
+133-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:115:19-62
+134        <activity android:name="code.theducation.music.activities.tageditor.AlbumTagEditorActivity" />
+134-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:116:9-81
+134-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:116:19-78
+135        <activity android:name="code.theducation.music.activities.tageditor.SongTagEditorActivity" />
+135-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:117:9-80
+135-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:117:19-77
+136        <activity android:name="code.theducation.music.activities.LyricsActivity" />
+136-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:118:9-63
+136-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:118:19-60
+137        <activity android:name="code.theducation.music.activities.UserInfoActivity" />
+137-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:119:9-65
+137-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:119:19-62
+138        <activity android:name="code.theducation.music.activities.LicenseActivity" />
+138-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:120:9-64
+138-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:120:19-61
+139        <activity android:name="code.theducation.music.activities.ShareInstagramStory" />
+139-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:121:9-68
+139-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:121:19-65
+140        <activity android:name="code.theducation.music.activities.DriveModeActivity" />
+140-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:122:9-66
+140-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:122:19-63
+141        <activity android:name="code.theducation.music.activities.PermissionActivity" />
+141-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:123:9-67
+141-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:123:19-64
+142        <activity android:name="code.theducation.music.activities.LockScreenActivity" />
+142-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:124:9-67
+142-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:124:19-64
+143        <activity
+143-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:126:9-129:75
+144            android:name="code.theducation.music.appshortcuts.AppShortcutLauncherActivity"
+144-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:127:13-69
+145            android:launchMode="singleInstance"
+145-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:128:13-48
+146            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+146-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:129:13-72
+147        <activity
+147-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:131:9-133:50
+148            android:name="code.theducation.music.activities.saf.SAFGuideActivity"
+148-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:132:13-60
+149            android:theme="@style/Theme.Intro" />
+149-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:133:13-47
+150
+151        <provider
+152            android:name="code.theducation.music.misc.GenericFileProvider"
+152-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:136:13-53
+153            android:authorities="code.theducation.music.debug.provider"
+153-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:137:13-60
+154            android:exported="false"
+154-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:138:13-37
+155            android:grantUriPermissions="true" >
+155-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:139:13-47
+156            <meta-data
+156-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:140:13-142:58
+157                android:name="android.support.FILE_PROVIDER_PATHS"
+157-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:141:17-67
+158                android:resource="@xml/provider_paths" />
+158-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:142:17-55
+159        </provider>
+160        <provider
+161            android:name="androidx.core.content.FileProvider"
+161-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:147:13-62
+162            android:authorities="code.theducation.music.debug"
+162-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:148:13-51
+163            android:exported="false"
+163-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:149:13-37
+164            android:grantUriPermissions="true" >
+164-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:150:13-47
+165            <meta-data
+165-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:140:13-142:58
+166                android:name="android.support.FILE_PROVIDER_PATHS"
+166-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:141:17-67
+167                android:resource="@xml/provider_paths" />
+167-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:142:17-55
+168        </provider>
+169
+170        <receiver android:name="code.theducation.music.service.MediaButtonIntentReceiver" >
+170-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:156:9-160:20
+170-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:156:19-68
 171            <intent-filter>
-171-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
-172                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-172-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
-172-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
+171-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:157:13-159:29
+172                <action android:name="android.intent.action.MEDIA_BUTTON" />
+172-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:158:17-77
+172-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:158:25-74
 173            </intent-filter>
-174
-175            <meta-data
-175-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
-176                android:name="android.appwidget.provider"
-176-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
-177                android:resource="@xml/app_widget_big_info" />
-177-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
-178        </receiver>
-179        <receiver
-179-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:182:9-193:20
-180            android:name="code.theducation.music.appwidgets.AppWidgetClassic"
-180-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:183:13-56
-181            android:exported="false"
-181-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:184:13-37
-182            android:label="@string/app_widget_classic_name" >
-182-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:185:13-60
-183            <intent-filter>
-183-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
-184                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-184-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
-184-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
-185            </intent-filter>
-186
-187            <meta-data
-187-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
-188                android:name="android.appwidget.provider"
-188-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
-189                android:resource="@xml/app_widget_classic_info" />
-189-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
-190        </receiver>
-191        <receiver
-191-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:194:9-205:20
-192            android:name="code.theducation.music.appwidgets.AppWidgetSmall"
-192-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:195:13-54
-193            android:exported="false"
-193-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:196:13-37
-194            android:label="@string/app_widget_small_name" >
-194-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:197:13-58
-195            <intent-filter>
-195-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
-196                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-196-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
-196-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
-197            </intent-filter>
-198
-199            <meta-data
-199-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
-200                android:name="android.appwidget.provider"
-200-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
-201                android:resource="@xml/app_widget_small_info" />
-201-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
-202        </receiver>
-203        <receiver
-203-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:206:9-217:20
-204            android:name="code.theducation.music.appwidgets.AppWidgetText"
-204-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:207:13-53
-205            android:exported="false"
-205-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:208:13-37
-206            android:label="@string/app_widget_text_name" >
-206-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:209:13-57
-207            <intent-filter>
-207-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
-208                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-208-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
-208-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
-209            </intent-filter>
-210
-211            <meta-data
-211-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
-212                android:name="android.appwidget.provider"
-212-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
-213                android:resource="@xml/app_widget_text" />
-213-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
-214        </receiver>
-215        <receiver
-215-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:218:9-229:20
-216            android:name="code.theducation.music.appwidgets.AppWidgetCard"
-216-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:219:13-53
-217            android:exported="false"
-217-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:220:13-37
-218            android:label="@string/app_widget_card_name" >
-218-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:221:13-57
-219            <intent-filter>
-219-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
-220                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-220-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
-220-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
-221            </intent-filter>
-222
-223            <meta-data
-223-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
-224                android:name="android.appwidget.provider"
-224-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
-225                android:resource="@xml/app_widget_card_info" />
-225-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
-226        </receiver>
-227
-228        <service
-228-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:231:9-233:48
-229            android:name="code.theducation.music.service.download.DownloadService"
-229-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:232:13-61
-230            android:label="@string/app_name" />
-230-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:233:13-45
-231        <service
-231-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:235:9-244:19
-232            android:name="code.theducation.music.service.MusicService"
-232-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:236:13-49
-233            android:enabled="true"
-233-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:237:13-35
-234            android:exported="true"
-234-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:238:13-36
-235            android:label="@string/app_name" >
-235-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:239:13-45
-236            <intent-filter>
-236-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:241:13-243:29
-237                <action android:name="android.media.browse.MediaBrowserService" />
-237-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:242:17-83
-237-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:242:25-80
-238            </intent-filter>
-239        </service>
-240
-241        <meta-data
-241-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:246:9-248:35
-242            android:name="android.max_aspect"
-242-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:247:13-46
-243            android:value="2.1" />
-243-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:248:13-32
-244        <meta-data
-244-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:250:9-252:36
-245            android:name="com.lge.support.SPLIT_WINDOW"
-245-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:251:13-56
-246            android:value="true" />
-246-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:252:13-33
-247        <meta-data
-247-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:254:9-256:43
-248            android:name="code.theducation.music.glide.RetroMusicGlideModule"
-248-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:255:13-78
-249            android:value="GlideModule" />
-249-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:256:13-40
-250        <meta-data
-250-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:258:9-260:43
-251            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-251-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:259:13-84
-252            android:value="GlideModule" />
-252-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:260:13-40
-253
-254        <provider
-254-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:12:9-16:40
-255            android:name="com.amitshekhar.debug.DebugDBInitProvider"
-255-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:13:13-69
-256            android:authorities="code.theducation.music.debug.DebugDBInitProvider"
-256-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:14:13-71
-257            android:enabled="true"
-257-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:15:13-35
-258            android:exported="false" />
-258-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:16:13-37
-259
-260        <activity
-260-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:15:9-18:68
-261            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
-261-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:16:13-81
-262            android:screenOrientation="unspecified"
-262-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:17:13-52
-263            android:theme="@style/Theme.Transparent.ImagePicker" />
-263-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:18:13-65
-264        <activity
-264-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:19:9-22:72
-265            android:name="com.yalantis.ucrop.UCropActivity"
-265-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:20:13-60
-266            android:screenOrientation="portrait"
-266-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:21:13-49
-267            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-267-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:22:13-69
-268
-269        <provider
-269-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:24:9-32:20
-270            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
-270-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:25:13-85
-271            android:authorities="code.theducation.music.debug.imagepicker.provider"
-271-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:26:13-72
-272            android:exported="false"
-272-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:27:13-37
-273            android:grantUriPermissions="true" >
-273-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:28:13-47
-274            <meta-data
-274-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:140:13-142:58
-275                android:name="android.support.FILE_PROVIDER_PATHS"
-275-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:141:17-67
-276                android:resource="@xml/image_picker_provider_paths" />
-276-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:142:17-55
-277        </provider>
-278
-279        <service
-279-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
-280            android:name="androidx.room.MultiInstanceInvalidationService"
-280-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
-281            android:directBootAware="true"
-281-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
-282            android:exported="false" />
-282-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
-283    </application>
-284
-285</manifest>
+174        </receiver>
+175        <receiver android:name="code.theducation.music.appwidgets.BootReceiver" >
+175-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:162:9-167:20
+175-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:162:19-58
+176            <intent-filter>
+176-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:163:13-166:29
+177                <action android:name="android.intent.action.BOOT_COMPLETED" />
+177-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:164:17-79
+177-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:164:25-76
+178                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+178-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:165:17-82
+178-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:165:25-79
+179            </intent-filter>
+180        </receiver>
+181        <receiver
+181-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:169:9-180:20
+182            android:name="code.theducation.music.appwidgets.AppWidgetBig"
+182-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:170:13-52
+183            android:exported="false"
+183-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:171:13-37
+184            android:label="@string/app_widget_big_name" >
+184-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:172:13-56
+185            <intent-filter>
+185-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
+186                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+186-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
+186-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
+187            </intent-filter>
+188
+189            <meta-data
+189-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
+190                android:name="android.appwidget.provider"
+190-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
+191                android:resource="@xml/app_widget_big_info" />
+191-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
+192        </receiver>
+193        <receiver
+193-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:182:9-193:20
+194            android:name="code.theducation.music.appwidgets.AppWidgetClassic"
+194-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:183:13-56
+195            android:exported="false"
+195-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:184:13-37
+196            android:label="@string/app_widget_classic_name" >
+196-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:185:13-60
+197            <intent-filter>
+197-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
+198                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+198-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
+198-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
+199            </intent-filter>
+200
+201            <meta-data
+201-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
+202                android:name="android.appwidget.provider"
+202-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
+203                android:resource="@xml/app_widget_classic_info" />
+203-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
+204        </receiver>
+205        <receiver
+205-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:194:9-205:20
+206            android:name="code.theducation.music.appwidgets.AppWidgetSmall"
+206-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:195:13-54
+207            android:exported="false"
+207-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:196:13-37
+208            android:label="@string/app_widget_small_name" >
+208-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:197:13-58
+209            <intent-filter>
+209-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
+210                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+210-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
+210-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
+211            </intent-filter>
+212
+213            <meta-data
+213-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
+214                android:name="android.appwidget.provider"
+214-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
+215                android:resource="@xml/app_widget_small_info" />
+215-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
+216        </receiver>
+217        <receiver
+217-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:206:9-217:20
+218            android:name="code.theducation.music.appwidgets.AppWidgetText"
+218-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:207:13-53
+219            android:exported="false"
+219-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:208:13-37
+220            android:label="@string/app_widget_text_name" >
+220-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:209:13-57
+221            <intent-filter>
+221-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
+222                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+222-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
+222-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
+223            </intent-filter>
+224
+225            <meta-data
+225-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
+226                android:name="android.appwidget.provider"
+226-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
+227                android:resource="@xml/app_widget_text" />
+227-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
+228        </receiver>
+229        <receiver
+229-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:218:9-229:20
+230            android:name="code.theducation.music.appwidgets.AppWidgetCard"
+230-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:219:13-53
+231            android:exported="false"
+231-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:220:13-37
+232            android:label="@string/app_widget_card_name" >
+232-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:221:13-57
+233            <intent-filter>
+233-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:173:13-175:29
+234                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+234-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:17-84
+234-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:174:25-81
+235            </intent-filter>
+236
+237            <meta-data
+237-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:177:13-179:63
+238                android:name="android.appwidget.provider"
+238-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:178:17-58
+239                android:resource="@xml/app_widget_card_info" />
+239-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:179:17-60
+240        </receiver>
+241
+242        <service
+242-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:231:9-233:48
+243            android:name="code.theducation.music.service.download.DownloadService"
+243-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:232:13-61
+244            android:label="@string/app_name" />
+244-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:233:13-45
+245        <service
+245-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:235:9-244:19
+246            android:name="code.theducation.music.service.MusicService"
+246-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:236:13-49
+247            android:enabled="true"
+247-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:237:13-35
+248            android:exported="true"
+248-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:238:13-36
+249            android:label="@string/app_name" >
+249-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:239:13-45
+250            <intent-filter>
+250-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:241:13-243:29
+251                <action android:name="android.media.browse.MediaBrowserService" />
+251-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:242:17-83
+251-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:242:25-80
+252            </intent-filter>
+253        </service>
+254
+255        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+256        <meta-data
+256-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:247:9-249:54
+257            android:name="com.google.android.gms.ads.APPLICATION_ID"
+257-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:248:13-69
+258            android:value="@string/ads_application" />
+258-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:249:13-52
+259        <meta-data
+259-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:251:9-253:35
+260            android:name="android.max_aspect"
+260-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:252:13-46
+261            android:value="2.1" />
+261-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:253:13-32
+262        <meta-data
+262-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:255:9-257:36
+263            android:name="com.lge.support.SPLIT_WINDOW"
+263-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:256:13-56
+264            android:value="true" />
+264-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:257:13-33
+265        <meta-data
+265-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:259:9-261:43
+266            android:name="code.theducation.music.glide.RetroMusicGlideModule"
+266-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:260:13-78
+267            android:value="GlideModule" />
+267-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:261:13-40
+268        <meta-data
+268-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:263:9-265:43
+269            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+269-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:264:13-84
+270            android:value="GlideModule" />
+270-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:265:13-40
+271
+272        <provider
+272-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:12:9-16:40
+273            android:name="com.amitshekhar.debug.DebugDBInitProvider"
+273-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:13:13-69
+274            android:authorities="code.theducation.music.debug.DebugDBInitProvider"
+274-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:14:13-71
+275            android:enabled="true"
+275-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:15:13-35
+276            android:exported="false" />
+276-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:16:13-37
+277
+278        <activity
+278-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:15:9-18:68
+279            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+279-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:16:13-81
+280            android:screenOrientation="unspecified"
+280-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:17:13-52
+281            android:theme="@style/Theme.Transparent.ImagePicker" />
+281-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:18:13-65
+282        <activity
+282-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:19:9-22:72
+283            android:name="com.yalantis.ucrop.UCropActivity"
+283-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:20:13-60
+284            android:screenOrientation="portrait"
+284-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:21:13-49
+285            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+285-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:22:13-69
+286
+287        <provider
+287-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:24:9-32:20
+288            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+288-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:25:13-85
+289            android:authorities="code.theducation.music.debug.imagepicker.provider"
+289-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:26:13-72
+290            android:exported="false"
+290-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:27:13-37
+291            android:grantUriPermissions="true" >
+291-->[com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:28:13-47
+292            <meta-data
+292-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:140:13-142:58
+293                android:name="android.support.FILE_PROVIDER_PATHS"
+293-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:141:17-67
+294                android:resource="@xml/image_picker_provider_paths" />
+294-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:142:17-55
+295        </provider> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+296        <activity
+296-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:43:9-47:64
+297            android:name="com.google.android.gms.ads.AdActivity"
+297-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:44:13-65
+298            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+298-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:45:13-122
+299            android:exported="false"
+299-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:46:13-37
+300            android:theme="@android:style/Theme.Translucent" />
+300-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:47:13-61
+301
+302        <provider
+302-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:49:9-53:39
+303            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+303-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:50:13-76
+304            android:authorities="code.theducation.music.debug.mobileadsinitprovider"
+304-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:51:13-73
+305            android:exported="false"
+305-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:52:13-37
+306            android:initOrder="100" />
+306-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:53:13-36
+307
+308        <service
+308-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:55:9-58:40
+309            android:name="com.google.android.gms.ads.AdService"
+309-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:56:13-64
+310            android:enabled="true"
+310-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:57:13-35
+311            android:exported="false" />
+311-->[com.google.android.gms:play-services-ads-lite:19.6.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\75c24427da89bb96dfffb8c25540b205\jetified-play-services-ads-lite-19.6.0\AndroidManifest.xml:58:13-37
+312
+313        <meta-data
+313-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\205595dbf9009f82cffa2221efe71034\jetified-play-services-basement-17.3.0\AndroidManifest.xml:23:9-25:69
+314            android:name="com.google.android.gms.version"
+314-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\205595dbf9009f82cffa2221efe71034\jetified-play-services-basement-17.3.0\AndroidManifest.xml:24:13-58
+315            android:value="@integer/google_play_services_version" />
+315-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\205595dbf9009f82cffa2221efe71034\jetified-play-services-basement-17.3.0\AndroidManifest.xml:25:13-66
+316
+317        <provider
+317-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:30:9-36:35
+318            android:name="androidx.work.impl.WorkManagerInitializer"
+318-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:31:13-69
+319            android:authorities="code.theducation.music.debug.workmanager-init"
+319-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:32:13-68
+320            android:directBootAware="false"
+320-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:33:13-44
+321            android:exported="false"
+321-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:34:13-37
+322            android:multiprocess="true" />
+322-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:35:13-40
+323
+324        <service
+324-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:38:9-43:35
+325            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+325-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:39:13-88
+326            android:directBootAware="false"
+326-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:40:13-44
+327            android:enabled="@bool/enable_system_alarm_service_default"
+327-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:41:13-72
+328            android:exported="false" />
+328-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:42:13-37
+329        <service
+329-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:44:9-50:35
+330            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+330-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:45:13-84
+331            android:directBootAware="false"
+331-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:46:13-44
+332            android:enabled="@bool/enable_system_job_service_default"
+332-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:47:13-70
+333            android:exported="true"
+333-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:48:13-36
+334            android:permission="android.permission.BIND_JOB_SERVICE" />
+334-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:49:13-69
+335
+336        <receiver
+336-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:52:9-57:35
+337            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+337-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:53:13-88
+338            android:directBootAware="false"
+338-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:54:13-44
+339            android:enabled="true"
+339-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:55:13-35
+340            android:exported="false" />
+340-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:56:13-37
+341        <receiver
+341-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:58:9-68:20
+342            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+342-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:59:13-106
+343            android:directBootAware="false"
+343-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:60:13-44
+344            android:enabled="false"
+344-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:61:13-36
+345            android:exported="false" >
+345-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:62:13-37
+346            <intent-filter>
+346-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:64:13-67:29
+347                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+347-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:65:17-87
+347-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:65:25-84
+348                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+348-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:66:17-90
+348-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:66:25-87
+349            </intent-filter>
+350        </receiver>
+351        <receiver
+351-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:69:9-79:20
+352            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+352-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:70:13-104
+353            android:directBootAware="false"
+353-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:71:13-44
+354            android:enabled="false"
+354-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:72:13-36
+355            android:exported="false" >
+355-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:73:13-37
+356            <intent-filter>
+356-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:75:13-78:29
+357                <action android:name="android.intent.action.BATTERY_OKAY" />
+357-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:76:17-77
+357-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:76:25-74
+358                <action android:name="android.intent.action.BATTERY_LOW" />
+358-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:77:17-76
+358-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:77:25-73
+359            </intent-filter>
+360        </receiver>
+361        <receiver
+361-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:80:9-90:20
+362            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+362-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:81:13-104
+363            android:directBootAware="false"
+363-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:82:13-44
+364            android:enabled="false"
+364-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:83:13-36
+365            android:exported="false" >
+365-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:84:13-37
+366            <intent-filter>
+366-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:86:13-89:29
+367                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+367-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:87:17-83
+367-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:87:25-80
+368                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+368-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:88:17-82
+368-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:88:25-79
+369            </intent-filter>
+370        </receiver>
+371        <receiver
+371-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:91:9-100:20
+372            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+372-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:92:13-103
+373            android:directBootAware="false"
+373-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:93:13-44
+374            android:enabled="false"
+374-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:94:13-36
+375            android:exported="false" >
+375-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:95:13-37
+376            <intent-filter>
+376-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:97:13-99:29
+377                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+377-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:98:17-79
+377-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:98:25-76
+378            </intent-filter>
+379        </receiver>
+380        <receiver
+380-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:101:9-112:20
+381            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+381-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:102:13-88
+382            android:directBootAware="false"
+382-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:103:13-44
+383            android:enabled="false"
+383-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:104:13-36
+384            android:exported="false" >
+384-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:105:13-37
+385            <intent-filter>
+385-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:107:13-111:29
+386                <action android:name="android.intent.action.BOOT_COMPLETED" />
+386-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:164:17-79
+386-->D:\work\project\Music-pro\app\src\main\AndroidManifest.xml:164:25-76
+387                <action android:name="android.intent.action.TIME_SET" />
+387-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:109:17-73
+387-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:109:25-70
+388                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+388-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:110:17-81
+388-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:110:25-78
+389            </intent-filter>
+390        </receiver>
+391        <receiver
+391-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:113:9-122:20
+392            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+392-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:114:13-99
+393            android:directBootAware="false"
+393-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:115:13-44
+394            android:enabled="@bool/enable_system_alarm_service_default"
+394-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:116:13-72
+395            android:exported="false" >
+395-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:117:13-37
+396            <intent-filter>
+396-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:119:13-121:29
+397                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+397-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:120:17-98
+397-->[androidx.work:work-runtime:2.1.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a451cf45fb3bd7088557df820f97282f\work-runtime-2.1.0\AndroidManifest.xml:120:25-95
+398            </intent-filter>
+399        </receiver>
+400
+401        <service
+401-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+402            android:name="androidx.room.MultiInstanceInvalidationService"
+402-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+403            android:directBootAware="true"
+403-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+404            android:exported="false" />
+404-->[androidx.room:room-runtime:2.2.5] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\1cf8e91f8001ac218a69c4ac4c5da2d0\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+405    </application>
+406
+407</manifest>

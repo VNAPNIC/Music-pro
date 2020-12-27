@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="about_album_label">%s -ról</string>
-    <string name="about_settings_summary">Csapat, társadalmi kapcsolatok</string>
+    <string name="about_settings_summary">Rate, share, version</string>
 
     <string name="accent_color">Kiemelő szín</string>
     <string name="accent_color_desc">Az kiemelő téma színe alapértelmezés szerint színtiszta</string>

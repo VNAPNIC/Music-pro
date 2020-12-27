@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Team, social links</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">Naglašena boja</string>
     <string name="accent_color_desc">Naglašena boja teme, zadana je plavo zelena</string>
     <string name="action_about">O aplikaciji</string>

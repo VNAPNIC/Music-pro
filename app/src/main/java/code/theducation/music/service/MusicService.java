@@ -866,6 +866,8 @@ public class MusicService extends Service
         this.playingQueue = new ArrayList<>(originalPlayingQueue);
         playSongAt(0);
         notifyChange(QUEUE_CHANGED);
+        notifyChange(META_CHANGED);
+        notifyChange(PLAY_STATE_CHANGED);
     }
 
     public boolean openTrackAndPrepareNextAt(int position) {

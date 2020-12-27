@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Đường dẫn tổ đội, mạng xã hội</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">Màu sắc nhấn mạnh</string>
     <string name="accent_color_desc">Màu sắc chủ đạo của chủ đề, mặc định là xanh ngọc</string>
     <string name="action_about">Về chúng tôi</string>

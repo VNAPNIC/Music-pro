@@ -10,6 +10,7 @@ import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.ui.NavigationUI
 import code.theducation.music.*
+import code.theducation.music.R
 import code.theducation.music.activities.base.AbsSlidingMusicPanelActivity
 import code.theducation.music.extensions.findNavController
 import code.theducation.music.helper.MusicPlayerRemote
@@ -19,11 +20,16 @@ import code.theducation.music.model.Song
 import code.theducation.music.repository.PlaylistSongsLoader
 import code.theducation.music.service.MusicService
 import code.theducation.music.util.PreferenceUtil
+import com.google.android.gms.ads.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.get
 
+
 class MainActivity : AbsSlidingMusicPanelActivity(), OnSharedPreferenceChangeListener {
+
+    private lateinit var mInterstitialAd: InterstitialAd
+
     companion object {
         const val TAG = "MainActivity"
         const val EXPAND_PANEL = "expand_panel"
@@ -50,7 +56,38 @@ class MainActivity : AbsSlidingMusicPanelActivity(), OnSharedPreferenceChangeLis
             findNavController(R.id.fragment_container).navigate(R.id.permissionFragment)
         }
 
+        showAds()
+
         showPromotionalDialog()
+    }
+
+    private fun showAds() {
+
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(this) {}
+
+        // Set your test devices. Check your logcat output for the hashed device ID to
+        // get test ads on a physical device. e.g.
+        // "Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("ABCDEF012345"))
+        // to get test ads on this device."
+        MobileAds.setRequestConfiguration(
+            RequestConfiguration.Builder()
+                .setTestDeviceIds(listOf("ABCDEF012345"))
+                .build()
+        )
+
+        // Create the InterstitialAd and set it up.
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = resources.getString(R.string.ads_interstitial)
+        val adRequest = AdRequest.Builder().build()
+        mInterstitialAd.loadAd(adRequest)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+        }
     }
 
     private fun showPromotionalDialog() {

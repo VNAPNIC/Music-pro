@@ -123,6 +123,8 @@ dependencies {
 
     implementation 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:1.0.0'
 
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+
     implementation 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:3.4.0.201406110918-r'
     implementation 'com.github.ksoichiro:android-observablescrollview:1.6.0'
     implementation 'com.github.kabouzeid:recyclerview-fastscroll:1.9-kmod'

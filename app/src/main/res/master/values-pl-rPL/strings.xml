@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Zespół, media społecznościowe</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">Kolor akcentu</string>
     <string name="accent_color_desc">Kolor akcentu motywu, domyślnie morski</string>
     <string name="action_about">O aplikacji</string>

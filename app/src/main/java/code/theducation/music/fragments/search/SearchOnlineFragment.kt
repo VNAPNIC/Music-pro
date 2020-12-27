@@ -1,7 +1,9 @@
 package code.theducation.music.fragments.search
 
-import android.net.Uri
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
+import android.speech.RecognizerIntent
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
@@ -11,8 +13,12 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.transition.TransitionManager
 import code.theducation.music.R
+import code.theducation.music.extensions.*
 import code.theducation.music.fragments.base.AbsMainActivityFragment
 import code.theducation.music.helper.MusicPlayerRemote
 import code.theducation.music.model.Song
@@ -27,6 +33,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
+
 
 abstract class SearchForm : TextWatcher {
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -46,32 +53,35 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        edtSearch.setOnEditorActionListener(object : TextView.OnEditorActionListener {
+        mainActivity.setBottomBarVisibility(View.GONE)
+        mainActivity.setSupportActionBar(toolbar)
+        voiceSearch.setOnClickListener { startMicSearch() }
+
+        searchView.setOnEditorActionListener(object : TextView.OnEditorActionListener {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
                 if (actionId != EditorInfo.IME_ACTION_SEARCH) {
                     return false
                 }
-                getListMusics(edtSearch.text.toString().toLowerCase())
+                getListMusics(searchView.text.toString().toLowerCase())
                 return true
             }
         })
 
-        edtSearch.addTextChangedListener(object : SearchForm() {
+        searchView.addTextChangedListener(object : SearchForm() {
 
-            override fun afterTextChanged(editable: Editable?) {
+            override fun afterTextChanged(newText: Editable?) {
                 if (!isSearching) {
-                    Log.i(TAG, "afterTextChanged -> ${editable.toString()}")
-                    getListSuggest(editable.toString())
+                    search(newText.toString())
                 }
                 isSearching = false
             }
         })
 
-        imgRemoveText.setOnClickListener {
-            edtSearch.setText("")
-            imgRemoveText.visibility = View.GONE
-            rlBoundSuggestionLayout.visibility = View.GONE
-            Utils.showKeyboard(requireContext(), edtSearch)
+        clearText.setOnClickListener {
+            searchView.clearText()
+            clearText.hide()
+            rcSuggestion.hide()
+            Utils.showKeyboard(requireContext(), searchView)
         }
 
         suggestionAdapter =
@@ -80,25 +90,51 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
         rcSuggestion.adapter = suggestionAdapter
 
         musicResultAdapter =
-                MusicResultAdapter(this)
+            MusicResultAdapter(this)
         rcSearchResult.layoutManager = GridLayoutManager(requireContext(), 1)
         rcSearchResult.adapter = musicResultAdapter
 
-        rlBoundSuggestionLayout.visibility = View.GONE
-        pbSearch.visibility = View.GONE
+        rcSuggestion.hide()
+        pbSearch.hide()
+
+        searchView.focusAndShowKeyboard()
+    }
+
+    private fun search(query: String) {
+        TransitionManager.beginDelayedTransition(appBarLayout)
+        voiceSearch.isGone = query.isNotEmpty()
+        clearText.isVisible = query.isNotEmpty()
+        getListSuggest(query)
+    }
+
+    private fun startMicSearch() {
+        val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        intent.putExtra(
+            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+        )
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.speech_prompt))
+        try {
+            startActivityForResult(
+                intent,
+                SearchFragment.REQ_CODE_SPEECH_INPUT
+            )
+        } catch (e: ActivityNotFoundException) {
+            e.printStackTrace()
+            showToast(getString(R.string.speech_not_supported))
+        }
     }
 
     override fun applySuggestion(suggestion: String) {
-        Log.i(TAG, "apply suggestion -> $suggestion")
-        edtSearch.setText(suggestion)
-        edtSearch.setSelection(edtSearch.text?.length ?: 0)
+        searchView.setText(suggestion)
+        searchView.setSelection(searchView.text?.length ?: 0)
     }
 
     override fun onSearching(suggestion: String) {
-        Log.i(TAG, "searching -> $suggestion")
         isSearching = true
-        edtSearch.setText(suggestion)
-        edtSearch.setSelection(edtSearch.text?.length ?: 0)
+        searchView.setText(suggestion)
+        searchView.setSelection(searchView.text?.length ?: 0)
         getListMusics(suggestion)
     }
 
@@ -115,28 +151,28 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
         Toast.makeText(requireContext(), "Start download ${song.title}", Toast.LENGTH_SHORT)
                 .show()
         MusicUtil.downloadFile(
-                context = requireContext(),
-                song = song
+            context = requireContext(),
+            song = song
         )
     }
 
     private fun getListSuggest(keyWord: String) {
         if (!Utils.isConnected(requireContext())) {
             Toast.makeText(
-                    requireContext(),
-                    getString(R.string.no_network),
-                    Toast.LENGTH_SHORT
+                requireContext(),
+                getString(R.string.no_network),
+                Toast.LENGTH_SHORT
             ).show()
         } else {
             if (!TextUtils.isEmpty(keyWord)) {
-                if (imgRemoveText.visibility == View.GONE) {
-                    imgRemoveText.visibility = View.VISIBLE
+                if (clearText.visibility == View.GONE) {
+                    clearText.show()
                 }
                 if (txtNoResult.visibility == View.VISIBLE) {
-                    txtNoResult.visibility = View.GONE
+                    txtNoResult.hide()
                 }
                 if (txtNoNetwork.visibility == View.VISIBLE) {
-                    txtNoNetwork.visibility = View.GONE
+                    txtNoNetwork.hide()
                 }
 
                 searchOnlineModel.searchBySuggestion(keyWord)
@@ -150,62 +186,65 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
                                 }
                                 is Result.Success -> {
                                     if (result.data.size >= 2) {
-                                        rlBoundSuggestionLayout.visibility = View.VISIBLE
+                                        rcSuggestion.show()
                                         suggestionAdapter.addNew(result.data[1] as ArrayList<String>)
-                                        pbSearch.visibility = View.GONE
+                                        pbSearch.hide()
                                     }
                                 }
                             }
                         })
-            } else if (imgRemoveText.visibility == View.VISIBLE) {
-                imgRemoveText.visibility = View.GONE
+            } else if (clearText.visibility == View.VISIBLE) {
+                clearText.hide()
             }
         }
     }
 
     private fun getListMusics(keyWork: String) {
-        imgRemoveText.visibility = View.VISIBLE
-        rlBoundSuggestionLayout.visibility = View.GONE
-        Utils.hideKeyboardFrom(requireContext(), edtSearch)
+        clearText.show()
+        rcSuggestion.hide()
+        Utils.hideKeyboardFrom(requireContext(), searchView)
         if (!Utils.isConnected(requireContext())) {
-            txtNoNetwork.visibility = View.VISIBLE
+            txtNoNetwork.show()
         } else {
-            txtNoNetwork.visibility = View.GONE
-            if (!TextUtils.isEmpty(edtSearch.text.toString())) {
-                pbSearch.visibility = View.VISIBLE
+            txtNoNetwork.hide()
+            if (!TextUtils.isEmpty(searchView.text.toString())) {
+                pbSearch.show()
                 searchOnlineModel.searchMusic(keyWork).observe(viewLifecycleOwner, { result ->
                     when (result) {
                         is Result.Loading -> {
                             println("Loading getListMusics")
-                            pbSearch.visibility = View.GONE
+                            pbSearch.hide()
                         }
                         is Result.Error -> {
                             println("Error getListMusics")
-                            pbSearch.visibility = View.GONE
+                            pbSearch.hide()
                         }
                         is Result.Success -> {
                             println("Success getListMusics")
-                            pbSearch.visibility = View.GONE
+                            pbSearch.hide()
 
                             try {
                                 val songs: ArrayList<Song> =
-                                        result.data.asSequence().filter { element -> element.files.isNotEmpty() }
-                                                .filter { element -> element.files[0].fileFormatInfo != null }
-                                                .filter { element ->
-                                                    element.files[0].fileFormatInfo.ps != null
-                                                            &&
-                                                            element.files[0].fileFormatInfo.ps.split(":").size > 1
-                                                }
-                                                .map { element -> convertCCMixterToSong(element) }
-                                                .toCollection(ArrayList())
+                                    result.data.asSequence()
+                                        .filter { element -> element.files.isNotEmpty() }
+                                        .filter { element -> element.files[0].fileFormatInfo != null }
+                                        .filter { element ->
+                                            element.files[0].fileFormatInfo.ps != null
+                                                    &&
+                                                    element.files[0].fileFormatInfo.ps.split(
+                                                        ":"
+                                                    ).size > 1
+                                        }
+                                        .map { element -> convertCCMixterToSong(element) }
+                                        .toCollection(ArrayList())
                                 musicResultAdapter.addNew(songs)
-                                pbSearch.visibility = View.GONE
+                                pbSearch.hide()
                                 if (songs.isEmpty()) {
                                     rcSearchResult.visibility = View.INVISIBLE
-                                    txtNoResult.visibility = View.VISIBLE
+                                    txtNoResult.show()
                                 } else {
-                                    rcSearchResult.visibility = View.VISIBLE
-                                    txtNoResult.visibility = View.GONE
+                                    rcSearchResult.show()
+                                    txtNoResult.hide()
                                 }
                             } catch (e: ArithmeticException) {
                                 Log.e(TAG, "Computation failed with ArithmeticException")
@@ -219,26 +258,26 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
 
     private fun convertCCMixterToSong(element: CCMixter): Song {
         val duration = TimeUnit.HOURS.toMillis(
-                element.files[0].fileFormatInfo.ps.split(":")[0].toLong()
+            element.files[0].fileFormatInfo.ps.split(":")[0].toLong()
         ) + TimeUnit.MINUTES.toMillis(
-                element.files[0].fileFormatInfo.ps.split(":")[1].toLong()
+            element.files[0].fileFormatInfo.ps.split(":")[1].toLong()
         )
 
         val cc = Calendar.getInstance()
         val song = Song(
-                id = element.files[0].fileId.toLong(),
-                title = element.uploadName,
-                trackNumber = 0,
-                year = cc.get(Calendar.YEAR),
-                duration = duration,
-                data = element.files[0].downloadUrl,
-                dateModified = System.currentTimeMillis(),
-                albumId = 1,
-                albumName = element.userName,
-                artistId = element.uploadId.toLong(),
-                artistName = element.userName,
-                composer = element.userName,
-                albumArtist = element.userName
+            id = element.files[0].fileId.toLong(),
+            title = element.uploadName,
+            trackNumber = 0,
+            year = cc.get(Calendar.YEAR),
+            duration = duration,
+            data = element.files[0].downloadUrl,
+            dateModified = System.currentTimeMillis(),
+            albumId = 1,
+            albumName = element.userName,
+            artistId = element.uploadId.toLong(),
+            artistName = element.userName,
+            composer = element.userName,
+            albumArtist = element.userName
         )
         song.genre = element.uploadExtra.usertags
         song.lyrics = ""

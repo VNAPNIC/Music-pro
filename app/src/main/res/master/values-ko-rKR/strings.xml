@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_settings_summary">Team, social links</string>
+    <string name="about_settings_summary">Rate, share, version</string>
     <string name="accent_color">강조 색상</string>
     <string name="accent_color_desc">강조 색상을 지정합니다. 기본값은 녹색입니다.</string>
     <string name="action_about">정보</string>
