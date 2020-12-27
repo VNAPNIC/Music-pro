@@ -941,8 +941,10 @@ public class MusicService extends Service
         if (openTrackAndPrepareNextAt(position)) {
             play();
         } else {
-            Toast.makeText(this, getResources().getString(R.string.unplayable_file), Toast.LENGTH_SHORT)
-                    .show();
+            if (playingQueue != null && playingQueue.size() > 0) {
+                Toast.makeText(this, getResources().getString(R.string.unplayable_file), Toast.LENGTH_SHORT)
+                        .show();
+            }
         }
     }
 

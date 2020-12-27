@@ -42,10 +42,13 @@ import code.theducation.music.helper.MusicPlayerRemote
 import code.theducation.music.model.CategoryInfo
 import code.theducation.music.util.PreferenceUtil
 import code.theducation.music.views.BottomNavigationBarTinted
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.*
 import kotlinx.android.synthetic.main.sliding_music_panel_layout.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 abstract class AbsSlidingMusicPanelActivity : AbsMusicServiceActivity() {
     companion object {
@@ -94,6 +97,7 @@ abstract class AbsSlidingMusicPanelActivity : AbsMusicServiceActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MobileAds.initialize(this) {}
         setContentView(createContentView())
         chooseFragmentForTheme()
         setupSlidingUpPanel()
@@ -104,8 +108,9 @@ abstract class AbsSlidingMusicPanelActivity : AbsMusicServiceActivity() {
         dimBackground.setBackgroundColor(ColorUtil.withAlpha(themeColor, 0.5f))
         dimBackground.setOnClickListener {
             println("dimBackground")
-
         }
+        val adRequest: AdRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
     }
 
     private fun setupBottomSheet() {

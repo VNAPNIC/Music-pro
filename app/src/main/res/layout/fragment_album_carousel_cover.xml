@@ -25,5 +25,11 @@
             tools:ignore="ContentDescription,UnusedAttribute"
             tools:srcCompat="@tools:sample/backgrounds/scenic[5]" />
 
+        <com.google.android.ads.nativetemplates.TemplateView
+            android:id="@+id/adNative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:gnt_template_type="@layout/gnt_medium_template_view" />
+
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

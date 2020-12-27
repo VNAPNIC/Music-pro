@@ -1,5 +1,6 @@
 package code.theducation.music.adapter.album
 
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,7 +22,12 @@ import code.theducation.music.util.NavigationUtil
 import code.theducation.music.util.PreferenceUtil
 import code.theducation.music.util.color.MediaNotificationProcessor
 import com.bumptech.glide.Glide
+import com.google.android.ads.nativetemplates.NativeTemplateStyle
+import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.android.synthetic.main.item_music_result_ads.view.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -140,6 +146,23 @@ class AlbumCoverPagerAdapter(
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
             loadAlbumCover()
+
+            if(view.adNative!=null) {
+                MobileAds.initialize(view.context) { }
+
+                val adLoader = AdLoader.Builder(
+                    view.context,
+                    view.context.resources.getString(R.string.ads_native)
+                ).forUnifiedNativeAd { unifiedNativeAd ->
+                    val styles =
+                        NativeTemplateStyle.Builder()
+                            .withMainBackgroundColor(ColorDrawable(view.resources.getColor(R.color.md_white_1000)))
+                            .build()
+                    view.adNative?.setStyles(styles)
+                    view.adNative?.setNativeAd(unifiedNativeAd)
+                }.build()
+                adLoader.loadAd(AdRequest.Builder().build())
+            }
         }
 
         override fun onDestroyView() {

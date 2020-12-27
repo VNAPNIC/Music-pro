@@ -55,7 +55,6 @@ class MainActivity : AbsSlidingMusicPanelActivity(), OnSharedPreferenceChangeLis
     override fun onCreate(savedInstanceState: Bundle?) {
         setDrawUnderStatusBar()
         super.onCreate(savedInstanceState)
-        MobileAds.initialize(this) {}
         loadRewardedAd()
         loadInterstitialAd()
         showAds()

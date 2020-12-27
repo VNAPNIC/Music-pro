@@ -17,4 +17,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription,UnusedAttribute"
         tools:srcCompat="@tools:sample/backgrounds/scenic[6]" />
+
+    <com.google.android.ads.nativetemplates.TemplateView
+        android:id="@+id/adNative"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:gnt_template_type="@layout/gnt_medium_template_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>

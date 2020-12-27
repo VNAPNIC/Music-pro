@@ -87,7 +87,7 @@ public class LyricUtil {
   }
 
   private static String getLrcOriginalPath(String filePath) {
-    return filePath.replace(filePath.substring(filePath.lastIndexOf("") + 1), "lrc");
+    return filePath.replace(filePath.substring(filePath.lastIndexOf(".") + 1), "lrc");
   }
 
   @NonNull
