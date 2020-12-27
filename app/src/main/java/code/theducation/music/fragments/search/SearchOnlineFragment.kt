@@ -15,12 +15,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.TransitionManager
 import code.theducation.music.R
-import code.theducation.music.extensions.focusAndShowKeyboard
-import code.theducation.music.extensions.hide
-import code.theducation.music.extensions.show
-import code.theducation.music.extensions.showToast
+import code.theducation.music.extensions.*
 import code.theducation.music.fragments.base.AbsMainActivityFragment
 import code.theducation.music.helper.MusicPlayerRemote
 import code.theducation.music.model.Song
@@ -32,6 +30,10 @@ import com.google.android.gms.ads.rewarded.RewardItem
 import com.google.android.gms.ads.rewarded.RewardedAdCallback
 import com.theducation.musicdownloads.module.CCMixter
 import kotlinx.android.synthetic.main.fragment_search_online.*
+import kotlinx.android.synthetic.main.fragment_search_online.appBarLayout
+import kotlinx.android.synthetic.main.fragment_search_online.clearText
+import kotlinx.android.synthetic.main.fragment_search_online.searchView
+import kotlinx.android.synthetic.main.fragment_search_online.toolbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -101,6 +103,15 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
             MusicResultAdapter(this)
         rcSearchResult.layoutManager = GridLayoutManager(requireContext(), 1)
         rcSearchResult.adapter = musicResultAdapter
+
+        musicResultAdapter.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
+            override fun onChanged() {
+                super.onChanged()
+                txtNoResult.isVisible = musicResultAdapter.itemCount < 1
+                val height = dipToPix(52f)
+                rcSearchResult.setPadding(0, 0, 0, height.toInt())
+            }
+        })
 
         rcSuggestion.hide()
         pbSearch.hide()
