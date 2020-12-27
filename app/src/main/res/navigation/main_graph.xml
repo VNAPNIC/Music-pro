@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/action_home">
+
+    <fragment
+        android:id="@+id/genreDetailsFragment"
+        android:name="code.theducation.music.fragments.genres.GenreDetailsFragment"
+        android:label="GenreDetailsFragment"
+        tools:layout="@layout/fragment_playlist_detail">
+        <argument
+            android:name="extra_genre"
+            app:argType="code.theducation.music.model.Genre" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playlistDetailsFragment"
+        android:name="code.theducation.music.fragments.playlists.PlaylistDetailsFragment"
+        android:label="PlaylistDetailsFragment"
+        tools:layout="@layout/fragment_playlist_detail">
+        <argument
+            android:name="extra_playlist"
+            app:argType="code.theducation.music.db.PlaylistWithSongs" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/albumDetailsFragment"
+        android:name="code.theducation.music.fragments.albums.AlbumDetailsFragment"
+        android:label="AlbumDetailsFragment"
+        tools:layout="@layout/fragment_album_details">
+        <argument
+            android:name="extra_album_id"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/artistDetailsFragment"
+        android:name="code.theducation.music.fragments.artists.ArtistDetailsFragment"
+        android:label="ArtistDetailsFragment"
+        tools:layout="@layout/fragment_artist_details">
+        <argument
+            android:name="extra_artist_id"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="code.theducation.music.fragments.library.LibraryFragment"
+        android:label=""
+        tools:layout="@layout/fragment_library" />
+
+    <fragment
+        android:id="@+id/detailListFragment"
+        android:name="code.theducation.music.fragments.DetailListFragment"
+        android:label="DetailListFragment">
+        <argument
+            android:name="type"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="code.theducation.music.fragments.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/searchOnlineFragment"
+        android:name="code.theducation.music.fragments.search.SearchOnlineFragment"
+        android:label="SearchOnlineFragment"
+        tools:layout="@layout/fragment_search_online" />
+
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="code.theducation.music.activities.SettingsActivity"
+        android:label="SettingsActivity" />
+
+    <activity
+        android:id="@+id/permissionFragment"
+        android:name="code.theducation.music.activities.PermissionActivity"
+        android:label="PermissionFragment"
+        tools:layout="@layout/activity_permission" />
+
+
+    <fragment
+        android:id="@+id/action_album"
+        android:name="code.theducation.music.fragments.albums.AlbumsFragment"
+        tools:layout="@layout/fragment_main_activity_recycler_view" />
+
+    <fragment
+        android:id="@+id/action_artist"
+        android:name="code.theducation.music.fragments.artists.ArtistsFragment"
+        tools:layout="@layout/fragment_main_activity_recycler_view" />
+
+    <fragment
+        android:id="@+id/action_song"
+        android:name="code.theducation.music.fragments.songs.SongsFragment"
+        tools:layout="@layout/fragment_main_activity_recycler_view" />
+
+    <fragment
+        android:id="@+id/action_genre"
+        android:name="code.theducation.music.fragments.genres.GenresFragment"
+        tools:layout="@layout/fragment_main_activity_recycler_view" />
+
+    <fragment
+        android:id="@+id/action_playlist"
+        android:name="code.theducation.music.fragments.playlists.PlaylistsFragment"
+        tools:layout="@layout/fragment_main_activity_recycler_view" />
+
+    <fragment
+        android:id="@+id/action_folder"
+        android:name="code.theducation.music.fragments.folder.FoldersFragment"
+        tools:layout="@layout/fragment_folder" />
+
+    <fragment
+        android:id="@+id/action_home"
+        android:name="code.theducation.music.fragments.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_banner_home" />
+
+
+</navigation>

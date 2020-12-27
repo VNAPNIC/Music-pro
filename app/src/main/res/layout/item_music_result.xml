@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItemVideo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgVideo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        android:tint="@color/black_color"
+        android:src="@color/md_grey_500" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDuaration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imgVideo"
+        android:layout_alignBottom="@+id/imgVideo"
+        android:background="@color/black_color"
+        android:text="2:40"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/imgDownload"
+        android:layout_toEndOf="@+id/imgVideo"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="aaaaaaa"
+            android:textColor="@color/black_color"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtChannelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:text="abc"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgDownload"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:tint="@color/black_color"
+        android:src="@drawable/ic_download_main" />
+
+    <ProgressBar
+        android:id="@+id/pbLoadingGetLink"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/md_grey_800"
+        android:indeterminateTintMode="src_in"
+        android:padding="10dp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imgVideo"
+        android:layout_marginTop="8dp"
+        android:background="@color/md_grey_500" />
+</RelativeLayout>

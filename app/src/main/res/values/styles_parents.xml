@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RetroMusic.Base.Adaptive" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="toolbarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="mcab_popup_theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="roundSelector">@drawable/round_selector</item>
+        <item name="rectSelector">@drawable/rect_selector</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.ActionButton.Overflow</item>
+        <item name="materialAlertDialogTheme">@style/MaterialAlertDialogTheme</item>
+        <item name="materialButtonStyle">@style/MaterialButtonTheme</item>
+        <item name="popupMenuStyle">@style/MaterialPopupMenuStyle</item>
+        <item name="popupWindowStyle">@style/MaterialPopupMenuStyle</item>
+    </style>
+
+    <style name="Theme.RetroMusic.Base" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="md_background_color">@color/darkColorSurface</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="toolbarPopupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="mcab_popup_theme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="roundSelector">@drawable/round_selector</item>
+        <item name="rectSelector">@drawable/rect_selector</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.ActionButton.Overflow</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="windowActionBar">false</item>
+        <item name="materialAlertDialogTheme">@style/MaterialAlertDialogTheme</item>
+        <item name="materialButtonStyle">@style/MaterialButtonTheme</item>
+        <item name="colorSurface">@color/darkColorSurface</item>
+        <item name="android:windowBackground">@color/window_color_dark</item>
+        <item name="popupMenuStyle">@style/MaterialPopupMenuStyle</item>
+    </style>
+
+    <style name="Theme.RetroMusic.Base.Black" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="md_background_color">@color/blackColorSurface</item>
+        <item name="roundSelector">@drawable/round_selector</item>
+        <item name="rectSelector">@drawable/rect_selector</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="materialAlertDialogTheme">@style/MaterialAlertDialogTheme</item>
+        <item name="materialButtonStyle">@style/MaterialButtonTheme</item>
+        <item name="colorSurface">@color/blackColorSurface</item>
+        <item name="colorOnBackground">@color/blackColorSurface</item>
+        <item name="toolbarPopupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="mcab_popup_theme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="popupMenuStyle">@style/MaterialPopupMenuStyle</item>
+    </style>
+
+    <style name="Theme.RetroMusic.Base.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="roundSelector">@drawable/round_selector</item>
+        <item name="rectSelector">@drawable/rect_selector</item>
+        <item name="toolbarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:windowBackground">@color/md_white_1000</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.ActionButton.Overflow</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="materialAlertDialogTheme">@style/MaterialAlertDialogTheme</item>
+        <item name="materialButtonStyle">@style/MaterialButtonTheme</item>
+        <item name="popupMenuStyle">@style/MaterialPopupMenuStyle</item>
+    </style>
+
+
+    <style name="MusicProgressSliderParent">
+        <item name="android:progressDrawable">@android:color/transparent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:thumb">@drawable/slider_thumb</item>
+    </style>
+
+    <!-- content description is necessary to find the overflow button later in the layout-->
+    <style name="Widget.ActionButton.Overflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:contentDescription">@string/abc_action_menu_overflow_description</item>
+    </style>
+
+    <style name="FabParent">
+        <item name="borderWidth">0dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

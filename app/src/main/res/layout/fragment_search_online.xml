@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/radius_view"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/ic_search_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:maxLength="1000000"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/imgRemoveText"
+            android:layout_toEndOf="@+id/icSearch"
+            android:background="@null"
+            android:completionThreshold="1"
+            android:hint="@string/action_search"
+            android:imeOptions="actionSearch"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/black_color"
+            android:textColorHint="@color/progress_gray"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgRemoveText"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_close"
+            android:tint="@color/black_color"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlMiniPlayer"
+        android:layout_below="@+id/rlSearch"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlBoundSuggestionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlSearch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pbSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/progress_gray"
+        android:indeterminateTintMode="src_in" />
+
+    <include layout="@layout/layout_mini_player" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/no_results"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/no_network"
+        android:visibility="gone" />
+</RelativeLayout>

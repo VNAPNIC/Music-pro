@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMiniPlayer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bg_mini_player"
+    android:visibility="gone">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTitleAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/md_white_1000"
+        android:textSize="14sp" />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitleAudio"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/md_white_1000"
+        android:indeterminateTintMode="src_in"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitleAudio">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPlayPause"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_play_arrow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPreTime"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_toStartOf="@+id/btnPlayPause"
+            android:padding="4dp"
+            android:src="@drawable/ic_back_player"
+            app:tint="@color/md_white_1000" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnNextTime"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/btnPlayPause"
+            android:padding="4dp"
+            android:src="@drawable/ic_next_player"
+            app:tint="@color/md_white_1000" />
+
+        <RelativeLayout
+            android:id="@+id/rlProcessBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnPlayPause"
+            android:layout_marginTop="8dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="8dp"
+                android:text="00:00"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seekbarPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/txtTotalTime"
+                android:layout_toEndOf="@+id/txtCurrentTime"
+                android:progressBackgroundTint="@color/darkColorPrimary"
+                android:progressTint="@color/md_white_1000"
+                android:theme="@style/Base.Widget.AppCompat.SeekBar"
+                android:thumbTint="@color/md_white_1000" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="8dp"
+                android:text="00:00"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

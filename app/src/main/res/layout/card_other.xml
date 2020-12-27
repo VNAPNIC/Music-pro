@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MaterialCardViewStroke"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="@dimen/about_card_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <code.theducation.appthemehelper.common.views.ATEAccentTextView
+            android:id="@+id/sb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="?attr/listPreferredItemPaddingStart"
+            android:paddingTop="?attr/listPreferredItemPaddingStart"
+            android:paddingEnd="?attr/listPreferredItemPaddingEnd"
+            android:paddingBottom="?attr/listPreferredItemPaddingEnd"
+            android:text="@string/others"
+            android:textAppearance="@style/TextViewOverline"
+            android:textColor="?colorAccent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <code.theducation.music.views.ListItemView
+            app:layout_constraintTop_toBottomOf="@id/sb4"
+            android:id="@+id/version"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0"
+            app:listItemIcon="@drawable/ic_info_outline"
+            app:listItemSummary="@string/pref_summary_open_source_licences"
+            app:listItemTitle="@string/version" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
