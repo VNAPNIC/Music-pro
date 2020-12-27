@@ -5,14 +5,19 @@ import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.ui.NavigationUI
 import code.theducation.music.*
 import code.theducation.music.R
 import code.theducation.music.activities.base.AbsSlidingMusicPanelActivity
 import code.theducation.music.extensions.findNavController
+import code.theducation.music.extensions.hide
 import code.theducation.music.helper.MusicPlayerRemote
 import code.theducation.music.helper.SearchQueryHelper.getSongs
 import code.theducation.music.model.CategoryInfo
@@ -21,6 +26,11 @@ import code.theducation.music.repository.PlaylistSongsLoader
 import code.theducation.music.service.MusicService
 import code.theducation.music.util.PreferenceUtil
 import com.google.android.gms.ads.*
+import com.google.android.gms.ads.rewarded.RewardItem
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdCallback
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import kotlinx.android.synthetic.main.sliding_music_panel_layout.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.get
@@ -29,6 +39,8 @@ import org.koin.android.ext.android.get
 class MainActivity : AbsSlidingMusicPanelActivity(), OnSharedPreferenceChangeListener {
 
     private lateinit var mInterstitialAd: InterstitialAd
+    private lateinit var mRewardedAd: RewardedAd
+    private var mIsLoading = false
 
     companion object {
         const val TAG = "MainActivity"
@@ -43,6 +55,10 @@ class MainActivity : AbsSlidingMusicPanelActivity(), OnSharedPreferenceChangeLis
     override fun onCreate(savedInstanceState: Bundle?) {
         setDrawUnderStatusBar()
         super.onCreate(savedInstanceState)
+        MobileAds.initialize(this) {}
+        loadRewardedAd()
+        loadInterstitialAd()
+        showAds()
         setStatusbarColorAuto()
         setNavigationbarColorAuto()
         setLightNavigationBar(true)
@@ -50,48 +66,79 @@ class MainActivity : AbsSlidingMusicPanelActivity(), OnSharedPreferenceChangeLis
         hideStatusBar()
         updateTabs()
 
-        // NavigationUI.setupWithNavController(getBottomNavigationView(), findNavController(R.id.fragment_container))
         setupNavigationController()
         if (!hasPermissions()) {
             findNavController(R.id.fragment_container).navigate(R.id.permissionFragment)
         }
-
-        showAds()
-
-        showPromotionalDialog()
     }
 
-    private fun showAds() {
-
-        // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(this) {}
-
-        // Set your test devices. Check your logcat output for the hashed device ID to
-        // get test ads on a physical device. e.g.
-        // "Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("ABCDEF012345"))
-        // to get test ads on this device."
-        MobileAds.setRequestConfiguration(
-            RequestConfiguration.Builder()
-                .setTestDeviceIds(listOf("ABCDEF012345"))
-                .build()
-        )
-
-        // Create the InterstitialAd and set it up.
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = resources.getString(R.string.ads_interstitial)
-        val adRequest = AdRequest.Builder().build()
-        mInterstitialAd.loadAd(adRequest)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        if (mInterstitialAd.isLoaded) {
-            mInterstitialAd.show()
+    fun showRewardedVideo(callback: RewardedAdCallback) {
+        if (mRewardedAd.isLoaded) {
+            mRewardedAd.show(this, callback)
         }
     }
 
-    private fun showPromotionalDialog() {
+    fun loadRewardedAd() {
+        if (!(::mRewardedAd.isInitialized) || !mRewardedAd.isLoaded) {
+            mIsLoading = true
+            mRewardedAd = RewardedAd(this, resources.getString(R.string.ads_rewarded))
+            mRewardedAd.loadAd(
+                AdRequest.Builder().build(),
+                object : RewardedAdLoadCallback() {
+                    override fun onRewardedAdLoaded() {
+                        mIsLoading = false
+                    }
 
+                    override fun onRewardedAdFailedToLoad(loadAdError: LoadAdError) {
+                        mIsLoading = false
+                    }
+                }
+            )
+        }
+    }
+
+    fun showAds(){
+        if (!mInterstitialAd.isLoading && !mInterstitialAd.isLoaded) {
+            // Create an ad request.
+            val adRequest = AdRequest.Builder().build()
+            mInterstitialAd.loadAd(adRequest)
+        }
+    }
+
+    private fun loadInterstitialAd() {
+        MobileAds.initialize(this) {
+            Log.d("MainActivity", "MobileAds initialize")
+        }
+
+        mInterstitialAd = InterstitialAd(this).apply {
+            adUnitId = resources.getString(R.string.ads_interstitial)
+            adListener = (
+                    object : AdListener() {
+                        override fun onAdLoaded() {
+                            Log.d("MainActivity", "MobileAds onAdLoaded")
+                            mInterstitialAd.show()
+                            Handler(Looper.getMainLooper()).postDelayed(
+                                { ads.hide() },
+                                1000
+                            )
+                        }
+
+                        override fun onAdFailedToLoad(loadAdError: LoadAdError) {
+                            val error =
+                                "domain: ${loadAdError.domain}, code: ${loadAdError.code}, " +
+                                        "message: ${loadAdError.message}"
+                            Log.e("MainActivity", "MobileAds onAdFailedToLoad $error")
+                            Handler(Looper.getMainLooper()).postDelayed(
+                                { ads.hide() },
+                                1000
+                            )
+                        }
+
+                        override fun onAdClosed() {
+                        }
+                    }
+                    )
+        }
     }
 
     private fun setupNavigationController() {

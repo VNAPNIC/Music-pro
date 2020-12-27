@@ -77,7 +77,7 @@ abstract class AbsBaseActivity : AbsThemeActivity() {
     private fun showOverflowMenu() {
     }
 
-    protected open fun requestPermissions() {
+    open fun requestPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(permissions, PERMISSION_REQUEST)
         }

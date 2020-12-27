@@ -2,4 +2,6 @@
 <resources>
     <string name="ads_application">ca-app-pub-3940256099942544~3347511713</string>
     <string name="ads_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ads_native">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="ads_rewarded">ca-app-pub-3940256099942544/5224354917</string>
 </resources>

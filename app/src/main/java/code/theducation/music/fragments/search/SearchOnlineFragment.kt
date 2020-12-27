@@ -13,18 +13,23 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.transition.TransitionManager
 import code.theducation.music.R
-import code.theducation.music.extensions.*
+import code.theducation.music.extensions.focusAndShowKeyboard
+import code.theducation.music.extensions.hide
+import code.theducation.music.extensions.show
+import code.theducation.music.extensions.showToast
 import code.theducation.music.fragments.base.AbsMainActivityFragment
 import code.theducation.music.helper.MusicPlayerRemote
 import code.theducation.music.model.Song
 import code.theducation.music.network.Result
 import code.theducation.music.util.MusicUtil
 import code.theducation.music.util.Utils
+import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.rewarded.RewardItem
+import com.google.android.gms.ads.rewarded.RewardedAdCallback
 import com.theducation.musicdownloads.module.CCMixter
 import kotlinx.android.synthetic.main.fragment_search_online.*
 import kotlinx.coroutines.CoroutineScope
@@ -48,6 +53,8 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
     private var isSearching = false
     private val searchOnlineModel by viewModel<SearchOnlineViewModel>()
 
+    private var downloadCount = 0
+
     private lateinit var suggestionAdapter: SuggestionAdapter
     private lateinit var musicResultAdapter: MusicResultAdapter
 
@@ -55,7 +62,8 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
         super.onViewCreated(view, savedInstanceState)
         mainActivity.setBottomBarVisibility(View.GONE)
         mainActivity.setSupportActionBar(toolbar)
-        voiceSearch.setOnClickListener { startMicSearch() }
+
+//        voiceSearch.setOnClickListener { startMicSearch() }
 
         searchView.setOnEditorActionListener(object : TextView.OnEditorActionListener {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
@@ -100,9 +108,20 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
         searchView.focusAndShowKeyboard()
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (!MusicPlayerRemote.isPlaying)
+            MusicPlayerRemote.resumePlaying()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Utils.hideKeyboardFrom(requireContext(), searchView)
+    }
+
     private fun search(query: String) {
         TransitionManager.beginDelayedTransition(appBarLayout)
-        voiceSearch.isGone = query.isNotEmpty()
+//        voiceSearch.isGone = query.isNotEmpty()
         clearText.isVisible = query.isNotEmpty()
         getListSuggest(query)
     }
@@ -139,6 +158,7 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
     }
 
     override fun onPlaySong(songs: ArrayList<Song>, position: Int) {
+        Utils.hideKeyboardFrom(requireActivity(), searchView)
         musicResultAdapter.updatePlayMusic(songs[position].id)
         if (MusicPlayerRemote.isPlaying(songs[position])) {
             MusicPlayerRemote.pauseSong()
@@ -148,12 +168,48 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
     }
 
     override fun onDownloadSong(song: Song) {
-        Toast.makeText(requireContext(), "Start download ${song.title}", Toast.LENGTH_SHORT)
+        Utils.hideKeyboardFrom(requireActivity(), searchView)
+        if (downloadCount == 2) {
+            MusicPlayerRemote.pauseSong()
+            mainActivity.showRewardedVideo(object : RewardedAdCallback() {
+                override fun onUserEarnedReward(p0: RewardItem) {
+                    println("onDownloadSong onUserEarnedReward $downloadCount")
+                    downloadCount = 0
+                }
+
+                override fun onRewardedAdClosed() {
+                    println("onDownloadSong onRewardedAdClosed $downloadCount")
+                    downloadCount = 0
+                    mainActivity.loadRewardedAd()
+                    Toast.makeText(
+                        requireContext(),
+                        "Start download ${song.title}",
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
+                    MusicUtil.downloadFile(
+                        context = requireContext(),
+                        song = song
+                    )
+                }
+
+                override fun onRewardedAdFailedToShow(adError: AdError) {
+                    println("onDownloadSong onRewardedAdFailedToShow $downloadCount")
+                    downloadCount = 0
+                }
+
+                override fun onRewardedAdOpened() {}
+            })
+            return
+        } else {
+            Toast.makeText(requireContext(), "Start download ${song.title}", Toast.LENGTH_SHORT)
                 .show()
-        MusicUtil.downloadFile(
-            context = requireContext(),
-            song = song
-        )
+            downloadCount++
+            MusicUtil.downloadFile(
+                context = requireContext(),
+                song = song
+            )
+        }
     }
 
     private fun getListSuggest(keyWord: String) {
@@ -213,16 +269,15 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
                     when (result) {
                         is Result.Loading -> {
                             println("Loading getListMusics")
-                            pbSearch.hide()
                         }
                         is Result.Error -> {
                             println("Error getListMusics")
+                            txtNoResult.show()
                             pbSearch.hide()
                         }
                         is Result.Success -> {
                             println("Success getListMusics")
                             pbSearch.hide()
-
                             try {
                                 val songs: ArrayList<Song> =
                                     result.data.asSequence()
@@ -237,6 +292,27 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
                                         }
                                         .map { element -> convertCCMixterToSong(element) }
                                         .toCollection(ArrayList())
+
+                                if (songs.size > 3) {
+                                    val ads = Song(
+                                        0,
+                                        "",
+                                        0,
+                                        0,
+                                        0,
+                                        "",
+                                        0,
+                                        0,
+                                        "null",
+                                        0,
+                                        "null",
+                                        "null",
+                                        "null"
+                                    )
+                                    ads.isAds = true
+                                    songs.add(3, ads)
+                                }
+
                                 musicResultAdapter.addNew(songs)
                                 pbSearch.hide()
                                 if (songs.isEmpty()) {
@@ -248,6 +324,8 @@ class SearchOnlineFragment : AbsMainActivityFragment(R.layout.fragment_search_on
                                 }
                             } catch (e: ArithmeticException) {
                                 Log.e(TAG, "Computation failed with ArithmeticException")
+                                txtNoResult.show()
+                                pbSearch.hide()
                             }
                         }
                     }

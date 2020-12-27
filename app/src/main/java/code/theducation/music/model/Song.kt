@@ -21,8 +21,8 @@ open class Song(
     open val albumArtist: String?
 ) : Parcelable {
 
-
     var isPlaying = false
+    var isAds = false
     var genre: String? = null
     var lyrics: String? = null
     var defaultExt: String? = null

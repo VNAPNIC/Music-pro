@@ -30,6 +30,7 @@ MERGED from [com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\cach
 MERGED from [:appthemehelper] D:\work\project\Music-pro\appthemehelper\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:2:1-35:12
 MERGED from [me.jorgecastillo:androidcolorx:0.2.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a850ed405bbcd0cfd4b0c1d9c8d6cbec\jetified-androidcolorx-0.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [:nativetemplates] D:\work\project\Music-pro\nativetemplates\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\fa5c13dbb760d3d7b2b6181428133f9f\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\3bf0cd2b23c1e2455b705066e1f362c9\gridlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\eb5a3b99cb2f0044143c7b8cb5d28935\navigation-ui-ktx-2.3.0\AndroidManifest.xml:17:1-24:12
@@ -222,6 +223,8 @@ MERGED from [com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\cach
 MERGED from [com.amitshekhar.android:debug-db:1.0.6] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\9fbd3366c720393011a9dc758c092ede\jetified-debug-db-1.0.6\AndroidManifest.xml:11:5-17:19
 MERGED from [com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:14:5-33:19
 MERGED from [com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:14:5-33:19
+MERGED from [:nativetemplates] D:\work\project\Music-pro\nativetemplates\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-12:19
+MERGED from [:nativetemplates] D:\work\project\Music-pro\nativetemplates\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-12:19
 MERGED from [com.google.android.material:material:1.3.0-alpha01] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\67817dcc21b0aaee1587c7dc8ed0b025\material-1.3.0-alpha01\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha01] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\67817dcc21b0aaee1587c7dc8ed0b025\material-1.3.0-alpha01\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\33a13fb0a1dd372083b3e862f1e8434a\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -576,6 +579,8 @@ MERGED from [com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\cac
 MERGED from [com.github.dhaval2404:imagepicker:1.7.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\2de2b3b61e1b8ae96b07bce10c9b9abb\jetified-imagepicker-1.7.1\AndroidManifest.xml:7:5-9:41
 MERGED from [me.jorgecastillo:androidcolorx:0.2.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a850ed405bbcd0cfd4b0c1d9c8d6cbec\jetified-androidcolorx-0.2.0\AndroidManifest.xml:5:5-7:41
 MERGED from [me.jorgecastillo:androidcolorx:0.2.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\a850ed405bbcd0cfd4b0c1d9c8d6cbec\jetified-androidcolorx-0.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [:nativetemplates] D:\work\project\Music-pro\nativetemplates\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativetemplates] D:\work\project\Music-pro\nativetemplates\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\fa5c13dbb760d3d7b2b6181428133f9f\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\fa5c13dbb760d3d7b2b6181428133f9f\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\vnapn\.gradle\caches\transforms-2\files-2.1\3bf0cd2b23c1e2455b705066e1f362c9\gridlayout-1.0.0\AndroidManifest.xml:20:5-44

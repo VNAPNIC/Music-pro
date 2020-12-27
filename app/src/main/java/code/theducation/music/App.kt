@@ -4,12 +4,13 @@ import androidx.multidex.MultiDexApplication
 import code.theducation.appthemehelper.ThemeStore
 import code.theducation.appthemehelper.util.VersionUtils
 import code.theducation.music.appshortcuts.DynamicShortcutManager
-import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.InterstitialAd
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 
 class App : MultiDexApplication() {
+    lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate() {
         super.onCreate()
@@ -29,10 +30,6 @@ class App : MultiDexApplication() {
 
         if (VersionUtils.hasNougatMR())
             DynamicShortcutManager(this).initDynamicShortcuts()
-
-        MobileAds.initialize(
-            this
-        ) { }
     }
 
     companion object {

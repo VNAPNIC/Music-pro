@@ -43,7 +43,7 @@ class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search), TextWa
             addTextChangedListener(this@SearchFragment)
             focusAndShowKeyboard()
         }
-        voiceSearch.setOnClickListener { startMicSearch() }
+//        voiceSearch.setOnClickListener { startMicSearch() }
         clearText.setOnClickListener { searchView.clearText() }
         keyboardPopup.apply {
             accentColor()
@@ -106,7 +106,7 @@ class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search), TextWa
     private fun search(query: String) {
         this.query = query
         TransitionManager.beginDelayedTransition(appBarLayout)
-        voiceSearch.isGone = query.isNotEmpty()
+//        voiceSearch.isGone = query.isNotEmpty()
         clearText.isVisible = query.isNotEmpty()
         libraryViewModel.search(query)
     }
